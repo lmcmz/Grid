@@ -117,7 +117,7 @@ public struct Grid: View, LayoutArranging, LayoutPositioning {
             .alignmentGuide(.top, computeValue: { _ in self.topGuide(item: item) })
         }
       }
-      .animation(self.gridAnimation)
+      .animation(self.gridAnimation, value: self.trackSizes)
       .frame(
         flow: self.flow,
         size: mainGeometry.size,
